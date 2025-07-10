@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   lint:
-    name: ESLint, TypeScript, Prettier, and Test
+    name: ESLint, TypeScript, Prettier, Build, and Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -39,6 +39,9 @@ jobs:
 
       - name: Prettier check
         run: pnpm run format:check
+
+      - name: Build check
+        run: pnpm run build
 
       - name: Run test
         run: pnpm run test
