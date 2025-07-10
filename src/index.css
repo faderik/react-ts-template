@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@layer base {
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: block;
+    src: url("/src/assets/fonts/Inter-Variable.ttf") format("truetype");
+  }
+
+  html {
+    @apply overflow-hidden;
+  }
+
+  #root {
+    @apply overflow-hidden font-primary text-typography w-screen h-screen;
+  }
+}
